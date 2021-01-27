@@ -9,3 +9,6 @@ class Post(models.Model):
     content = models.TextField()
     updated = models.DateTimeField(default=timezone.now)  
     publication_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
