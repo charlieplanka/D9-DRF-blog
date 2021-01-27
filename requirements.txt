@@ -1,3 +1,5 @@
+psycopg2-binary==2.8.4
+dj_database_url==0.5.0
 asgiref==3.3.1
 Django==3.1.5
 pytz==2020.5
