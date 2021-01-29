@@ -21,7 +21,7 @@ class Post(models.Model):
     updated = models.DateTimeField(default=timezone.now)  
     publication_date = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, null=True, default=None, blank=True, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL, related_name="posts")
 
     def __str__(self):
         return self.title
