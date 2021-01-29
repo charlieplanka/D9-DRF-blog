@@ -9,4 +9,6 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    
+    class Meta:
+        verbose_name_plural = "categories"
