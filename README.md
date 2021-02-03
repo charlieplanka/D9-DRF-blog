@@ -61,7 +61,7 @@ HTTP/1.1 201 Created
   
 ## Получить данные по конкретному посту
 ```
-GET https://safe-cliffs-55556.herokuapp.com/categories/<id>
+GET https://safe-cliffs-55556.herokuapp.com/<id>
 ```
   
 Пример запроса и ответа в httpie:
@@ -85,13 +85,13 @@ HTTP/1.1 200 OK
 ## Получить список всех категорий
 
 ```
-GET https://safe-cliffs-55556.herokuapp.com/categories
+GET https://safe-cliffs-55556.herokuapp.com/categories/
 ```
 В поле **posts** отображается список постов, которым назначена эта категория.
   
 Пример запроса и ответа в httpie:
 ```
-https https://safe-cliffs-55556.herokuapp.com/categories
+https https://safe-cliffs-55556.herokuapp.com/categories/
   
 HTTP/1.1 200 OK
 [
@@ -117,7 +117,7 @@ HTTP/1.1 200 OK
 
 ## Создать новую категорию
 ```
-POST https://safe-cliffs-55556.herokuapp.com/categories
+POST https://safe-cliffs-55556.herokuapp.com/categories/
 ```
 Пример данных категории в запросе:
 ```
