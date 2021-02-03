@@ -128,7 +128,7 @@ POST https://safe-cliffs-55556.herokuapp.com/categories/
   
 Пример запроса и ответа в httpie:
 ```
-https POST https://safe-cliffs-55556.herokuapp.com/categories title=Приключения
+https POST https://safe-cliffs-55556.herokuapp.com/categories/ title=Приключения
   
 HTTP/1.1 201 Created
 {
