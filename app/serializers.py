@@ -11,10 +11,7 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(required=False)
-    category = serializers.SlugRelatedField(
-        read_only=True,
-        slug_field='title'
-    )
+    category = serializers.SlugRelatedField(queryset=Category.objects.all(), slug_field='title', required=False)
 
     class Meta:
         model = Post
@@ -28,5 +25,5 @@ class CategorySerializer(serializers.ModelSerializer):
 
     def get_fields(self):
         fields = super(CategorySerializer, self).get_fields()
-        fields['posts'] = PostSerializer(many=True)
+        fields['posts'] = PostSerializer(many=True, required=False)
         return fields
